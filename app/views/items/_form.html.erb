@@ -1,0 +1,52 @@
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag1 %>
+    <%= form.select :tag1, [['レディース'],['メンズ'],['ベビー・キッズ'],['インテリア・住まい・小物'],['本・音楽・ゲーム'],['おもちゃ・ホビー・グッズ'],['コスメ・香水・美容'],['家電・スマホ・カメラ'],['スポーツ・レジャー'],['ハンドメイド'],['チケット'],['自転車・オートバイ'],['その他']], {include_blank: "選択してください"}, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag2 %>
+    <%= form.select :tag2, [['レディース'],['メンズ'],['ベビー・キッズ'],['インテリア・住まい・小物'],['本・音楽・ゲーム'],['おもちゃ・ホビー・グッズ'],['コスメ・香水・美容'],['家電・スマホ・カメラ'],['スポーツ・レジャー'],['ハンドメイド'],['チケット'],['自転車・オートバイ'],['その他']], {include_blank: "選択してください"}, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag3 %>
+    <%= form.select :tag3, [['レディース'],['メンズ'],['ベビー・キッズ'],['インテリア・住まい・小物'],['本・音楽・ゲーム'],['おもちゃ・ホビー・グッズ'],['コスメ・香水・美容'],['家電・スマホ・カメラ'],['スポーツ・レジャー'],['ハンドメイド'],['チケット'],['自転車・オートバイ'],['その他']], {include_blank: "選択してください"}, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, [['新品・未使用'],['未使用に近い'],['目立った傷や汚れなし'],['やや傷や汚れあり'],['傷や汚れあり'],['全体的に状態が悪い']], {}, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, placeholder: "3000", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, placeholder: "2008年に購入。年に3回程度の使用頻度で、使用年数の割には綺麗で傷もなし。", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録", class: "btn btn-primary" %>
+  </div>
+<% end %>
