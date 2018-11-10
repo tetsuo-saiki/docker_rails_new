@@ -1,3 +1,3 @@
 $(function(){
-    alert('jQuery OK!');
+    // alert('jQuery OK!');
 });

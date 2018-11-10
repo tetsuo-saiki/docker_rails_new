@@ -64,3 +64,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
+
+gem 'bcrypt', '~> 3.1.7'
+gem 'kaminari'
+
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'devise-i18n'
