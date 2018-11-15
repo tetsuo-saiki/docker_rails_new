@@ -46,6 +46,26 @@
     <%= form.text_area :content, placeholder: "2008年に購入。年に3回程度の使用頻度で、使用年数の割には綺麗で傷もなし。", class: "form-control" %>
   </div>
 
+  <div class="field">
+    <%= form.label :image1 %>
+    <%= form.file_field :image1, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image2 %>
+    <%= form.file_field :image2, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image3 %>
+    <%= form.file_field :image3, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image4 %>
+    <%= form.file_field :image4, class: "form-control" %>
+  </div>
+
   <div class="actions">
     <%= form.submit "登録", class: "btn btn-primary" %>
   </div>

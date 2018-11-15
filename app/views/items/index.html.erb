@@ -12,6 +12,10 @@
       <th>Status</th>
       <th>Price</th>
       <th>Content</th>
+      <th>image1</th>
+      <th>image2</th>
+      <th>image3</th>
+      <th>image4</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +30,10 @@
         <td><%= item.status %></td>
         <td><%= item.price %></td>
         <td><%= item.content %></td>
+        <td><% if item.image1.url %><%= image_tag item.image1.url %><% end %></td>
+        <td><% if item.image2.url %><%= image_tag item.image2.url %><% end %></td>
+        <td><% if item.image3.url %><%= image_tag item.image3.url %><% end %></td>
+        <td><% if item.image4.url %><%= image_tag item.image4.url %><% end %></td>
         <td><%= link_to 'Show', item, class: "btn btn-default" %></td>
         <td><%= link_to 'Edit', edit_item_path(item), class: "btn btn-info" %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
