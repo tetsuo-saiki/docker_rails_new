@@ -30,10 +30,10 @@
         <td><%= item.status %></td>
         <td><%= item.price %></td>
         <td><%= item.content %></td>
-        <td><% if item.image1.url %><%= image_tag item.image1.url %><% end %></td>
-        <td><% if item.image2.url %><%= image_tag item.image2.url %><% end %></td>
-        <td><% if item.image3.url %><%= image_tag item.image3.url %><% end %></td>
-        <td><% if item.image4.url %><%= image_tag item.image4.url %><% end %></td>
+        <td><% if item.image1.url %><%= image_tag item.image1.thumb.url %><% end %></td>
+        <td><% if item.image2.url %><%= image_tag item.image2.thumb.url %><% end %></td>
+        <td><% if item.image3.url %><%= image_tag item.image3.thumb.url %><% end %></td>
+        <td><% if item.image4.url %><%= image_tag item.image4.thumb.url %><% end %></td>
         <td><%= link_to 'Show', item, class: "btn btn-default" %></td>
         <td><%= link_to 'Edit', edit_item_path(item), class: "btn btn-info" %></td>
         <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>

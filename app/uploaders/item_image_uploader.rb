@@ -1,6 +1,6 @@
 class ItemImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
@@ -47,5 +47,9 @@ class ItemImageUploader < CarrierWave::Uploader::Base
 
   def size_range
     1..5.megabytes
+  end
+
+  version :thumb do
+    process :resize_to_limit => [300, 300]
   end
 end

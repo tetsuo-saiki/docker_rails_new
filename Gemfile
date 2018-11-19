@@ -73,3 +73,5 @@ gem 'devise-bootstrap-views'
 gem 'devise-i18n'
 # image uploader
 gem 'carrierwave'
+# image resize
+gem 'rmagick'
