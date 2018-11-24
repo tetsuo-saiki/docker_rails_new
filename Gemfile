@@ -75,3 +75,5 @@ gem 'devise-i18n'
 gem 'carrierwave'
 # image resize
 gem 'rmagick'
+# faker
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'

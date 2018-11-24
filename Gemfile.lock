@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 52bef5004b5486057d9f15cdb237e1e386295353
+  branch: master
+  specs:
+    faker (1.9.1)
+      i18n (>= 0.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -249,6 +257,7 @@ DEPENDENCIES
   devise
   devise-bootstrap-views
   devise-i18n
+  faker!
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
