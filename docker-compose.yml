@@ -17,6 +17,8 @@ services:
     image: mysql:5.7
     env_file:
       - ./environments/db.env
+    ports:
+      - 3306:3306
     volumes:
       - db-data:/var/lib/mysql
   web:
