@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
   # GET /items
   def index
-    @items = Item.all
+    @items = Item.page(params[:page]).per(10).order(:id)
   end
 
   # GET /items/1
@@ -19,7 +19,7 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
   end
-
+  
   # POST /items
   def create
     @item = Item.new(item_params)

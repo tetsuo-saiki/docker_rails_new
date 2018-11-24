@@ -42,6 +42,8 @@
   </tbody>
 </table>
 
+<%= paginate(@items) %>
+<%= page_entries_info(@items) %>
 <br>
 
 <%= link_to 'New Item', new_item_path, class: "btn btn-primary" %>
